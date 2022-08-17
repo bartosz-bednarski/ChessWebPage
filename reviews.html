@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-Pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>BB_Chess</title>
+  </head>
+  <body>
+    <div class="header">Nagłówek</div>
+    <div class="container">
+      <div class="column menu">
+        menu <br />
+        <ul>
+          <li><a href="index.htm"> Main Page</a></li>
+          <li><a href="players.html">Players</a></li>
+          <li><a href="figures.html">Figures</a></li>
+          <li><a href="moves.html">Figures moves</a></li>
+          <li><a class="active" href="reviews.html">Opinie</a></li>
+          <li><a href="">Graj online</a></li>
+          <li><a href="">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="column center" id="column.center">
+        <h1>Opinie</h1>
+        <div class="opinionContainer">
+          <div class="imgContainer">
+            <article>
+              <img
+                src="https://www.clipartmax.com/png/small/325-3254282_waiter-working-png-file-icon-waiter-png.png"
+                id="personImg"
+                alt="Waiter Working Png File - Icon Waiter Png @clipartmax.com"
+              />
+              <h2><p class="nick">Adam</p></h2>
+              <p class="opinia">
+                " Bardzo fajna strona. Widać że coś się tutaj dzieje. Oby tak
+                dalej. "
+              </p>
+              <p class="ocena">7/10</p>
+            </article>
+          </div>
+          <div class="buttonContainer">
+            <button id="prevOpinion" class="prevOpinion">Prev</button>
+            <button id="randomOpinion" class="randomOpinion">Random</button>
+            <button id="nextOpinion" class="nextOpinion">Next</button>
+          </div>
+        </div>
+
+        <script src="reviewsScript.js"></script>
+      </div>
+    </div>
+    <div class="footer">stopka</div>
+  </body>
+</html>

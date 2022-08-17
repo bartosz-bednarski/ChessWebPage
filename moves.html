@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-Pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>BB_Chess</title>
+  </head>
+  <body>
+    <div class="header">Nagłówek</div>
+    <div class="container">
+      <div class="column menu">
+        menu <br />
+        <ul>
+          <li><a href="index.htm"> Main Page</a></li>
+          <li><a href="players.html">Players</a></li>
+          <li><a href="figures.html">Figures</a></li>
+          <li><a class="active" href="moves.html">Figures moves</a></li>
+          <li><a href="reviews.html">Opinie</a></li>
+          <li><a href="">Graj online</a></li>
+          <li><a href="">Kontakt</a></li>
+        </ul>
+      </div>
+      <!--Main box container-->
+      <div class="figuresGrid">
+        <!--Top header box-->
+        <div class="figuresMenu">Learn more about figures moves</div>
+        <!--Box for buttons-->
+        <div class="figuresTopBtns">
+          <button class="figuresBtn" type="button" data-id="All">All</button>
+          <button class="figuresBtn" type="button" data-id="1 Point">
+            1 Point
+          </button>
+          <button class="figuresBtn" type="button" data-id="3 Points">
+            3 Points
+          </button>
+          <button class="figuresBtn" type="button" data-id="5 Points">
+            5 Points
+          </button>
+          <button class="figuresBtn" type="button" data-id="9 Points">
+            9 Points
+          </button>
+        </div>
+        <!--Grid container-->
+
+        <!--Box for data-->
+        <div class="movesMain">
+          <article class="articleGrid">
+            <div class="moveInfo">
+              <header>
+                <h4 id="moveHeader">King</h4>
+              </header>
+              <p class="moveText">"soegoswegose ngsoeignsoegnsoengsoeng"</p>
+            </div>
+            <img src="./Pictures/kingR.jpg" class="moveJpg" alt="King" />
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <script src="movesScript.js"></script>
+    <div class="footer">stopka</div>
+  </body>
+  <!--https://www.chess.com/terms/chess-queen-->
+</html>

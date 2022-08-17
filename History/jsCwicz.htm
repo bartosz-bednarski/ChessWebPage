@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en-Pl">
+<head>
+<meta charset="UTF-8">
+<meta name= "viewport" content= "width=device-width, initial-scale=1.0">
+<link rel= "stylesheet" href="style.css">
+<title>
+BB_Chess
+</title>
+</head>
+<body>
+<div class="header"> 
+Nagłówek
+</div>
+
+<div class="container">
+
+<div class="column menu"> menu <br>
+<ul>
+<li><a href="index.htm"> Główna</a></li>
+<li><a class="active" href="jscwicz.htm">JS ćwiczenia</a></li>
+<li><a href="js2.html">Color Flipper</a></li>
+<li><a href="licznik.html">Licznik</a></li>
+<li><a href="reviews.html">Opinie</a></li>
+<li><a href="">Newsy</a></li>
+<li><a href="">Ciekawe partie</a></li>
+<li><a href="">Graj online</a></li>
+<li><a href="">Kontakt</a></li>
+</ul>
+</div>
+
+<div class= "column center">
+<p>Ćwiczenia JavaScript</p>
+
+<div class="grid-container" id="kontener">
+<div class="item1">
+<img id="szachownica" src="00.jpg" style="width:100px height:100px "> <br>
+<button onclick="document.getElementById('szachownica').src='E4.jpg'">King's Path</button>
+<button onclick="document.getElementById('szachownica').src='00.jpg'">Reset</button>
+</div>
+
+<div class="item2">
+<img id="szachownica2" src="00.jpg" style=" width:100px height:100px "> <br>
+<button onclick="document.getElementById('szachownica2').src='E4.jpg'">King's Path</button>
+<button onclick="document.getElementById('szachownica2').src='BHC6.jpg'">Sicilian Defence</button>
+<button onclick="document.getElementById('szachownica2').src='00.jpg'">Reset</button>
+</div>
+
+</div>
+<hr>
+<p>90 + 10 =</p>
+<p id="dodawanie"></p>
+
+<script>
+document.getElementById("dodawanie").innerHTML = 90 + 10;
+</script>
+<p>100+10=
+<script>
+document.write(100+10);
+</script>
+</p>
+
+<!--<script>
+alert(100);
+</script>
+-->
+<script>
+console.log(100+10); //Wynik wyświetla się w konsoli-w przeglądarce F12-konsola
+</script>
+
+<p>
+<button onclick="window.print()">Druknij stronke byczq</button>
+</p>
+<hr>
+
+<p> Statements</p>
+<p id="statements"><p>
+
+<script>
+let x, y, z;
+x = 5;
+y = 10;
+z = x + y;
+
+document.getElementById("statements").innerHTML = "Dodawanie x + y = z : " + x + " + " + y + " = " + z ;
+</script>
+<p>typeof</p>
+<p id="sprawdzian"></p>
+<script>
+document.getElementById("sprawdzian").innerHTML = 
+typeof "1213" + "<br>" +
+typeof "dupa" + "<br>" +
+typeof "$$";
+</script>
+
+<p id="functiona"></p>
+<script>
+var x = myFunction(5, 15);
+document.getElementById("functiona").innerHTML = x;
+
+function myFunction(a, b) {
+return a * b; // nie dziala
+}
+</script>
+
+
+<p id="deegresFtC"></p>
+<script>
+function toCelcius(f){
+return (5/9) * (f-32);
+}
+document.getElementById("deegresFtC").innerHTML = "The temperature is: " + toCelcius(77) + " deegres of Celcius";
+
+</script>
+
+<p id="deegressCtK"></p>
+
+<script>
+document.getElementById("deegressCtK").innerHTML = "The temperature is: " +  toKelvin(25) + " deegres of Kelvin";
+
+function toKelvin(c){
+return (c + 273.5);
+}
+</script>
+
+<p id="car"></p>
+<script>
+const vcar = {type: "Volvo", model:"X60", color:"black"};
+document.getElementById("car").innerHTML = "My favorite car is " + vcar.color + " " + vcar.type + " model " + vcar.model + " metoda substr" + vcar.model.substr(1,2);
+</script>
+
+<button onclick = "document.getElementById('demo').innerHTML=Date()">Sprawdź czas</button> <!-- <button onclick="this.innerHTML=Date()"></button> -->
+<p id="demo"></p>
+
+<button onclick="textFunction()">Duże litery</button>
+<p id="demo2">Tam wyżej jest guzik co zmienia wielkość liter</p>
+
+<script>
+function textFunction() {
+let text = document.getElementById("demo2").innerHTML;
+document.getElementById("demo2").innerHTML = 
+text.toUpperCase();
+}
+</script>
+
+<p id="demo3">Konwersja ciągu znaków na tablice</p>
+<script>
+let number= "7,2,8,3,2,7,5,9,6";
+const numberArray = number.split(",");
+document.getElementById("demo3").innerHTML = "Pierwsza cyfra mojego numeru: " + numberArray[0];
+</script>
+<br>
+<p id="demo4"></p>
+<script>
+let pos= "Znajdź w tym tekście powtarzające się litery 'aj'";
+document.getElementById("demo4").innerHTML = "Znajdź w tym tekście powtarzające się litery 'aj': " + pos.match(/aj/gi) + "<br>" + 
+"Czy tamten tekst zawiera wyrażenie \"tym\" : " + pos.includes("tym") + "<br>" +
+"Czy tekst od 3 pozycji zaczyna się od Litery a? : " + pos.startsWith("a",2) + "<br>" +
+"Czy tekst w zakresie 0-48 znaków kończy się na literę j ? : " + pos.endsWith("j",48); 
+</script> 
+<hr>
+<p style= "text-align: center"> Metody liczbowe </p><br>
+
+<p id="demo5"></p>
+<script>
+let a = 121;
+document.getElementById("demo5").innerHTML= "Metoda toString() - zwraca liczbę jako ciąg: " +
+a.toString() + " " + (121).toString() + " " + (100 + 21).toString() + "<br>" +
+"toExponential - zwraca ciąg znaków(string) z zaokrągleniem w notacji wykładniczej do podanego miejsca " + a.toExponential(5) + "<br>" +
+"toFixed() - zaokrągla liczbe do podanych miejsc po przecinku " + a.toFixed(3);
+</script>
+<hr>
+<p style= "text-align: center"> Tablice </p><br>
+<p id="demo6"></p>
+<hr>
+<p id="demo7"></p>
+<hr>
+<p id="demo8"></p>
+<hr>
+<p id="demo9"></p>
+<hr>
+<p id="demo10"></p>
+<p id="demo11"></p>
+<p id="demo12"></p>
+<hr>
+
+<script>
+const cities = ["Stockholm", "Rio", "Denver", "Nairobi", "Moscow", "Berlin", "Tokio", "Warsaw"];
+const cities2 = ["Krakow", "Lodz", "Gdansk"];
+let position = cities.indexOf("Warsaw");
+//findIndex() to samo - zwraca pozycje pierwszej zgodnej wartości
+document.getElementById("demo6").innerHTML = "Zawartość tablicy cities:" + "<br>" + cities.join("<br>") + "<br>" + "Pozycja WW-a w tablicy: " + position; 
+//toString() - to samo tylko bez określania separatora - jest domyślny ,
+//cities.pop() wyrzuca ostatni element z tablicy i go wypisuje - Warsaw by wypadł
+//cities.push("Praga") lub cities[cities.length] = "Praga"; dodaje Prage do tablicy na ostatnim miejscu i zwraca długość tablicy
+//cities.shift() usuwa pierwszy element tablicy i zwraca reszte
+//cities.unshift("Palermo") dodaje Palermo na początek tablicy i zwraca długość tablicy
+const allCities = cities.concat(cities2);
+document.getElementById("demo7").innerHTML = "Zawartość tablicy cities2: " + "<br>" + allCities.join("<br>");
+document.getElementById("demo8").innerHTML = "Zawartość tablicy allCities zawierającej dane z dwóch tablic: " + "<br>" + allCities.join("<br>");
+let removed = allCities.splice(9, 2, "Radomsko", "Sopot");// splice wprowadza dane do tablicy i usuwa - 9 która pozycja do wprowadzenia, 2 - ilość elementów do usunięcie od 9 pozycji
+document.getElementById("demo9").innerHTML = "Zawartość tablicy allCities po zamianie dwóch ostatnich elementów : " + "<br>" + allCities.join("<br>") + "<br>" + "Miasta usunięte: " + removed;
+//const plallcities = allcities.slice(7,10); - tworzy nową tablice z wycinka danych z tablicy allcities od pozycji 7 do 11 bez 11 ale z 7;
+//allCities.sort() - sortuje alfabetycznie tablice;
+</script>
+
+<script>
+const numbers = [21, 23, 37, 27, 121, 101];
+let txt = "";
+numbers.forEach(myFunction);
+function myFunction(value, index, array){
+txt+= value + "<br>";
+}
+document.getElementById("demo10").innerHTML = "Metoda forEach() dla każdego elementu" + "<br>" + txt;
+</script>
+
+<script>
+const numbers2 = [2, 4, 6, 8, 10];
+const numbers2Map = numbers2.map(myFunction2);
+
+function myFunction2(value, index, array){
+return value * 2;
+}
+document.getElementById("demo11").innerHTML = "Utworzenie mapy z tablicy i mnożenie każdego elementu *2 :" + "<br>" + numbers2Map.join("<br>");
+
+const numbersO5 = numbers2.filter(myFunction3);
+
+function myFunction3(value, index, array){
+return value > 5;
+}
+document.getElementById("demo12").innerHTML = "Wartości tablicy wyższe od 5: " + "<br>" + numbersO5.join("<br>");
+</script>
+<!-- Nie działa
+<p id="demo13"></p>
+<script>
+const numbers4 = [30, 31, 32, 33, 34, 35];
+let sum = numbers4.reduce(myFunction4);
+document.getElementById("demo13").innerHTML = "Suma liczb z tablicy: ";
+function myFuntion4(total, value, index, array){
+return total + value;
+}
+</script>
+numbers.every(myFunction);
+function myFunction(value, index, array){
+return value > 18;
+}
+//every - sprawdza każdy element tablicy w tym przypadku czy jest większy od 18 i zwraca wartość true albo false
+//some - to samo tylko czy jakies wogóle spełniają warunek
+
+-->
+<p style= "text-align:center; color:red"> Ogarnij metode Array w Iteracjach tablicy JS</p>
+<hr>
+<p style= "text-align:center">Daty</p>
+<p id="demo13"></p>
+<script>
+const data = new Date();
+document.getElementById("demo13").innerHTML = data;
+</script>
+<p id="demo14"></p>
+<script>
+document.getElementById("demo13").innerHTML = "Math.floor(x) - zaokrągla liczbe do najbliższej w dół: 4.8 - " + Math.floor(4.8) + "<br>" +
+"Math.sign(x) - zwraca czy liczba jest dodatnia ujemna czy 0: -45.6 - " + Math.sign(-45.6);
+</script>
+
+
+
+<button onClick="document.getElementById('demo15').innerHTML = Math.random()">Wylosuj liczbę od 0-1</button>
+<button onClick="document.getElementById('demo15').innerHTML = Math.floor(Math.random()*101)">Wylosuj liczbę od 0-100</button>
+<p id="demo15"></p>
+
+
+
+<p id="demo16"></p>
+<script>
+document.getElementById("demo16").innerHTML = "Czy Pi jest większe od 3.14 ?: " + Boolean(Math.PI>3.14);
+//Boolean jest zbędne może być bez tego
+// Operatory porównania:
+// == czy wartości sa równe bez względu na typ danych
+// === czy wartości sa równe pod względem wartości i wypu danych
+// != czy wartości sa różne
+//!== czy wartości są różne pod względem wartości i typu danych
+// && and
+// || or
+// ! not
+</script>
+
+
+
+<p id="demo17"></p>
+<script>
+let day;
+switch (new Date().getDay()){
+case 0:
+day = "Poniedziałek";
+break;
+case 1:
+day = "Wtorek";
+break;
+case 2:
+day = "Środa";
+break;
+case 3:
+day = "Czwartek";
+break;
+case 4:
+day = "Piątek";
+break;
+case 5:
+day = "Sobota";
+break;
+case 6:
+day = "Niedziela";
+break;
+}
+const godzina = new Date().getHours();
+let powitanie;
+if (godzina < 12){
+powitanie = "Miłego dnia";
+}else if (godzina < 20) {
+powitanie = "Miłego popołudnia";
+}else {
+powitanie = "Miłego wieczoru";
+}
+document.getElementById("demo17").innerHTML = powitanie + " w " + day;
+</script>
+
+
+<p id="demo18"></p>
+<script>
+let dzien;
+switch (new Date().getDay()){
+case 4:
+text = "Piąteczek";
+break;
+case 5,6:
+text = "Weekend";
+break;
+default:
+text = "Nie ma weekendu :("
+break;
+}
+document.getElementById("demo18").innerHTML = text;
+</script>
+
+
+
+<p id="demo19"></p>
+<script>
+const auta4 = ["BMW", "Audi", "Skoda", "Kia", "Opel"];
+let text =" ";
+for (let i = 0; i < auta4.length; i++){
+text += auta4[i] + "<br>";
+}
+document.getElementById("demo19").innerHTML = "Pętla for, która wypisuje elementy tablicy auta4:" + "<br>" + text;
+</script>
+
+
+
+<!-- Set - zestaw danych, których wartości nie moga się powtarzać
+<script>
+const letters = new Set(["a","b","c"]);
+letters.add("a");
+letters.add("b");
+letters.add("c");
+
+document.getElementById("demo").innerHTML = letters.size;
+</script>
+-->
+
+<hr>
+<p>Mapy</p>
+<hr>
+<p id="demo20"></p>
+<script>
+const telefon2 = new Map([
+[1, "a"],
+[2, "b"],
+[3, "c"]
+]);
+
+let text2 = "";
+telefon2.forEach (function(key, value){
+text2 += value + ' = ' + key + "<br>"
+})
+document.getElementById("demo20").innerHTML = text2;
+
+</script>
+</div>
+</div>
+<div class= "footer">stopka
+
+
+</div>
+</body>
+</html>

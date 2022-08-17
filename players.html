@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-Pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>BB_Chess</title>
+  </head>
+  <body>
+    <div class="header">Nagłówek</div>
+    <div class="container">
+      <div class="column menu">
+        menu <br />
+        <ul>
+          <li><a href="index.htm"> Main Page</a></li>
+          <li><a class="active" href="players.html">Players</a></li>
+          <li><a href="figures.html">Figures</a></li>
+          <li><a href="moves.html">Figures moves</a></li>
+          <li><a href="reviews.html">Opinie</a></li>
+          <li><a href="">Graj online</a></li>
+          <li><a href="">Kontakt</a></li>
+        </ul>
+      </div>
+      <!--Main box container-->
+      <div class="figuresGrid">
+        <!--Top header box-->
+        <div class="figuresMenu">Top 10 Chess Players in the world</div>
+        <div class="playersMain">
+          <article class="playersBox">
+            <img src="./Pictures/Carlsen.jpg" />
+
+            <div class="playersTextContainer">
+              <div class="playersBtnBox">
+                <button class="playersBtn" id="Main" data-id="Main">
+                  Main
+                </button>
+                <button class="playersBtn" id="History" data-id="History">
+                  History
+                </button>
+                <button class="playersBtn" id="BestGame" data-id="BestGame">
+                  Best Game
+                </button>
+              </div>
+              <h4>
+                <div class="playersPreName">GM</div>
+                Magnus Carlsen
+                <div class="contact">
+                  <a href="https://www.chess.com/member/magnuscarlsen"
+                    ><img src="./Pictures/contact/chess.png" alt=""
+                  /></a>
+                  <a href="https://twitter.com/magnuscarlsen"
+                    ><img src="./Pictures/contact/twitter.png" alt=""
+                  /></a>
+                  <a href="https://www.facebook.com/magnuschess/"
+                    ><img src="./Pictures/contact/facebook.png" alt=""
+                  /></a>
+                  <a href="https://www.instagram.com/magnus_carlsen/">
+                    <img src="./Pictures/contact/instagram.png" alt=""
+                  /></a>
+                </div>
+              </h4>
+              <p class="bio">
+                GM Magnus Carlsen is the current world chess champion. To many
+                people, he’s the best to ever play the game, although GMs Garry
+                Kasparov and Bobby Fischer remain in the conversation. At any
+                rate, the clear and remarkable point is that before turning 30
+                years old, Carlsen has already earned a spot at the top.
+                <br /><br />It’s easy to see why. The 13-year-old Norwegian
+                prodigy drew Kasparov and defeated GM Anatoly Karpov at the same
+                event in 2004, one month before he became the second-youngest GM
+                in history (and still eighth-youngest as of 2021). In 2009, he
+                became the youngest player to break the 2800-rating threshold (a
+                record only broken by GM Alireza Firouzja in 2021).<br /><br />
+                Then Carlsen transitioned from young world-class player to
+                all-time great. He captured the world number-one ranking in 2011
+                and still hasn’t let go of it. He won the world title in 2013
+                and has successfully defended it four times (2014, 2016, 2018,
+                and 2021). Additionally, he has won multiple world titles in
+                rapid (twice) and blitz (four times) time controls, achieved the
+                highest rating ever, and racked up several elite tournament
+                wins, including four Norway Chess victories and seven in Wijk
+                aan Zee.<br /><br />The amazing part is it seems like there’s
+                much more ahead for Carlsen. In October 2020 Carlsen's 125-game
+                undefeated streak came to an end (he scored 42 wins and 83 draws
+                during this streak), setting yet another world record. If he
+                continues performing the way he has, Carlsen could create
+                something truly legendary. In an era of chess that’s more
+                competitive than ever, he’s far ahead of the opposition.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <script src="playersScript.js"></script>
+    <div class="footer">stopka</div>
+  </body>
+  <!--https://www.chess.com/terms/chess-queen-->
+</html>
