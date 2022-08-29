@@ -7,16 +7,29 @@
     <title>BB_Chess</title>
   </head>
   <body>
-    <div class="header">Nagłówek</div>
+    <div class="header">
+      <div class="headerIcons">
+        Contact me
+
+        <a href="https://www.linkedin.com/in/bartosz-bednarski-050196234/"
+          ><img src="./pictures/contact/linkedin.png"
+        /></a>
+        <a href="https://www.chess.com/member/violentrider"
+          ><img src="./pictures/contact/chess.png"
+        /></a>
+        <a class="contactLinks" href="mailto:bartosz.bednarski97@gmail.com"
+          ><img src="./pictures/contact/gmail.png"
+        /></a>
+      </div>
+    </div>
     <div class="container">
       <div class="column menu">
-        menu <br />
         <ul>
           <li><a class="active" href="index.htm"> Main Page</a></li>
           <li><a href="players.html">Players</a></li>
           <li><a href="figures.html">Figures</a></li>
           <li><a href="moves.html">Figures moves</a></li>
-          <li><a href="">Opinie</a></li>
+          <li><a href="reviews.html">Opinie</a></li>
           <li><a href="">Graj online</a></li>
           <li><a href="">Kontakt</a></li>
         </ul>
@@ -24,18 +37,34 @@
 
       <div class="hero">
         <div class="modalOverlay" id="modalOverlay">
-          <button
-            class="btnModalOverlayClose"
-            id="btnModalOverlayClose"
-          ></button>
           <article>
-            Date of modal project:<br />
-            22.06.2022
+            <br />
+            <ul style="list-style-type: none" ;>
+              <li>
+                <a href="players.html"
+                  >1. Meet the best chess players in the world.</a
+                >
+              </li>
+              <li>
+                <a href="figures.html"
+                  >2. Learn about the figures and their values.</a
+                >
+              </li>
+              <li>
+                <a href="moves.html"
+                  >3. Get know how to move on the game border.</a
+                >
+              </li>
+            </ul>
           </article>
         </div>
         <div class="banner">
-          <h1>Modal Project</h1>
-          <button class="btnModal" id="btnModal">Open modal</button>
+          <h1>
+            Hello<br />
+            My name is Bartosz <br />
+            Would you like to explore the chess world with me ?
+          </h1>
+          <button class="btnModal" id="btnModal">Let's get started</button>
         </div>
       </div>
     </div>

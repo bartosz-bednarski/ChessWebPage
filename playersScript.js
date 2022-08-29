@@ -271,9 +271,7 @@ function displayPlayersHistory(playersItems) {
     <button class="playersBtn" id="History" data-id="History">
       History
     </button>
-    <button class="playersBtn" id="BestGame" data-id="BestGame">
-                  Best Game
-                </button>
+    
       </div>
       <h4>
         <div class="playersPreName">GM</div>
@@ -315,9 +313,7 @@ function displayPlayersMain(playersItems) {
       <button class="playersBtn" id="History" data-id="History">
         History
       </button>
-      <button class="playersBtn" id="BestGame" data-id="BestGame">
-                  Best Game
-                </button>
+     
         </div>
         <h4>
           <div class="playersPreName">GM</div>
@@ -360,42 +356,6 @@ function displayPlayersMain(playersItems) {
       </div>
     </article>`;
   });
-  displayPlayers = displayPlayers.join("");
-  playersMain.innerHTML = displayPlayers;
-}
-
-function displayPlayersGame(playersItems) {
-  let displayPlayers = playersItems.map(function (item) {
-    return ` <article class="playersBox">
-    ${item.picture}
-    <div class="playersTextContainer">
-      <div class="playersBtnBox">
-      <button class="playersBtn" id="Main" data-id="Main">
-      Main
-    </button>
-    <button class="playersBtn" id="History" data-id="History">
-      History
-    </button>
-    <button class="playersBtn" id="BestGame" data-id="BestGame">
-                  Best Game
-                </button>
-      </div>
-      
-      <div class = "bestGameGif">
-      <h4>
-      seihbglkjsbeglkiseblkgsebkldrhdrhdrh<img src="./Pictures/contact/chess-board.png"
-      />
-      </h4>
-      <img src="./Pictures/contact/board(7).gif">
-      </div>  
-       
-                   
-      
-      
-    </div>
-  </article>`;
-  });
-  //ten gif trzeba jakos ustawic sensownie
   displayPlayers = displayPlayers.join("");
   playersMain.innerHTML = displayPlayers;
 }
